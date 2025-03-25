@@ -1,6 +1,6 @@
 import app from "./index";
 
 
-module.exports = (req, res) => {
+export default (req, res) => {
   return app(req, res);
 };

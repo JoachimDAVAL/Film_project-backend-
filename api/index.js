@@ -11,4 +11,4 @@ app.get("/", (req, res) => {
 });
 
 // Exporter l'Express app comme une fonction Serverless
-module.exports = app;
+export default app;

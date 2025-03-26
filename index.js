@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extend: true }));
 
 
 app.use(cors({
-  origin: 'https://film-project-frontend.vercel.app/',
+  origin: '*',
 }));
 
 app.use('/api', router);

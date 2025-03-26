@@ -19,4 +19,6 @@ app.get("/", (req, res) => {
 app.use('/api', router);
 
 // Exporter l'Express app comme une fonction Serverless
-export default app;
+export default (req, res) => {
+  app(req, res);
+};

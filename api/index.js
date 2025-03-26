@@ -5,7 +5,7 @@ import router from "./router.js";
 
 const app = express();
 app.use(cors({
-  origin: '*',
+  origin: 'https://film-project-frontend.vercel.app/',
 }));
 app.use(express.json());
 

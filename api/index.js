@@ -5,12 +5,13 @@ import router from "./router.js";
 
 const app = express();
 
+app.use(express.json());
+
+app.use(express.urlencoded({ extend: true }));
+
 app.use(cors({
   origin: 'https://film-project-frontend.vercel.app/',
 }));
-app.use(express.json());
-
-
 
 app.get("/", (req, res) => {
   res.json({ message: "Bienvenue sur l'API !" });
@@ -19,6 +20,4 @@ app.get("/", (req, res) => {
 app.use('/api', router);
 
 // Exporter l'Express app comme une fonction Serverless
-export default (req, res) => {
-  app(req, res);
-};
+export default app;

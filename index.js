@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extend: true }));
 
 
 app.use(cors({
-  origin: '*',
+  origin: 'http://localhost:5173',
 }));
 
 app.use('/api', router);

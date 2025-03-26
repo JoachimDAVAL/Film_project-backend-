@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://film-project-frontend.vercel.app/',
+  origin: 'https://film-project-frontend.vercel.app',
 }));
 
 app.get("/", (req, res) => {
